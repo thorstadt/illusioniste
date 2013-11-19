@@ -2,7 +2,15 @@
 
 A (very) thin wrapper over im4java, a wrapper over ImageMagick's command-line utilities. This is literally nothing more than a small macro.
 
+This fork changed exactly two lines which were giving me trouble. Now supports formats other than Jpeg.
+
 ## Usage
+
+Add The following to your project.clj
+    [illusioniste "1.0.1-SNAPSHOT"]
+
+    (ns example.core
+      (:require [illusioniste.core :as illusioniste]))
 
     (illusioniste/transform-image image-byte-array
       (rotate 90.0)
@@ -15,9 +23,7 @@ A (very) thin wrapper over im4java, a wrapper over ImageMagick's command-line ut
 
 * Some helpers to get images into and out of byte-arrays
 * Support more than simple convert calls (composite, etc.)
-* Support more formats than JPEG
 
 ## License
 
-Copyright &copy; 2011 Ryan Crum
 Distributed under the Eclipse Public License. See LICENSE.
